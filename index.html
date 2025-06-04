@@ -4,67 +4,72 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Syed Hajira | Data Analyst Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #f0f2f5;
+      background-color: #f4f6f8;
       color: #333;
+      line-height: 1.6;
     }
     header {
-      background: linear-gradient(to right, #0066cc, #004080);
+      background: linear-gradient(to right, #007acc, #005a9e);
       color: white;
-      padding: 2rem;
+      padding: 3rem 1rem;
       text-align: center;
-      animation: fadeInDown 1s ease-in-out;
     }
-    @keyframes fadeInDown {
-      0% { opacity: 0; transform: translateY(-20px); }
-      100% { opacity: 1; transform: translateY(0); }
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+    header p {
+      margin: 0.5rem 0 1rem;
+    }
+    .links a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
     }
     section {
-      max-width: 900px;
-      margin: 2rem auto;
+      margin-bottom: 3rem;
       background: white;
-      padding: 2rem;
       border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-      animation: fadeInUp 1s ease-in-out;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 2rem;
+      animation: fadeIn 0.6s ease-in-out;
     }
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-    h1, h2, h3 {
-      margin-top: 0;
+    h2 {
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
     }
     ul {
-      padding-left: 1.2rem;
+      padding-left: 1.5rem;
     }
-    .link-group a {
-      display: inline-block;
-      margin: 0 0.5rem;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .link-group i {
-      margin-right: 6px;
-    }
-    .skill-list li::before {
-      content: '\f121';
-      font-family: 'Font Awesome 6 Free';
+    .icon-skill::before {
+      content: "\f121";
+      font-family: "Font Awesome 6 Free";
       font-weight: 900;
-      margin-right: 8px;
-      color: #0066cc;
+      color: #007acc;
+      margin-right: 0.5rem;
     }
-    .soft-skill-list li::before {
-      content: '\f0eb';
-      font-family: 'Font Awesome 6 Free';
+    .icon-soft::before {
+      content: "\f0eb";
+      font-family: "Font Awesome 6 Free";
       font-weight: 900;
-      margin-right: 8px;
-      color: #ff6600;
+      color: #e67e22;
+      margin-right: 0.5rem;
     }
     footer {
       text-align: center;
@@ -79,78 +84,91 @@
   <header>
     <h1>Syed Hajira</h1>
     <p>Data Analyst | Python | SQL | Power BI</p>
-    <div class="link-group">
-      <a href="mailto:hajirasyed.k@gmail.com"><i class="fas fa-envelope"></i>Email</a>
-      <a href="https://www.linkedin.com/in/syed-hajira/" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
-      <a href="https://github.com/syed-hajira" target="_blank"><i class="fab fa-github"></i>GitHub</a>
+    <div class="links">
+      <a href="mailto:hajirasyed.k@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+      <a href="https://www.linkedin.com/in/syed-hajira" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/syed-hajira" target="_blank"><i class="fab fa-github"></i> GitHub</a>
     </div>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      Strategic analytics professional skilled in building data products and automated reporting systems that enhance decision-making and streamline operations. Experienced in using Python, SQL, and BI tools to turn complex data into actionable insights, with an insight-driven approach to modeling, dashboards, and automation.
-    </p>
-  </section>
+  <div class="container">
+    <section>
+      <h2>About Me</h2>
+      <p>
+        Strategic analytics professional focused on building data products and automated reporting systems to sharpen decision-making and operational performance. Experienced in Python, SQL, and BI tools with a design-led mindset toward modeling, dashboards, and automation.
+      </p>
+    </section>
 
-  <section>
-    <h2>Skills</h2>
-    <ul class="skill-list">
-      <li>Python, R, SQL, HTML/CSS, JavaScript</li>
-      <li>Power BI, Tableau, Excel Dashboards</li>
-      <li>Data Wrangling, KPI Analysis, DAX, Power Query, Web Scraping</li>
-    </ul>
-    <h3>Soft Skills</h3>
-    <ul class="soft-skill-list">
-      <li>Communication</li>
-      <li>Critical Thinking</li>
-      <li>Problem Solving</li>
-    </ul>
-  </section>
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li class="icon-skill">Python (Pandas, NumPy, Matplotlib, Seaborn), R, SQL</li>
+        <li class="icon-skill">Power BI, Tableau, Excel, DAX, Power Query</li>
+        <li class="icon-skill">HTML, CSS, JavaScript, Git, GitHub</li>
+        <li class="icon-skill">Web Scraping, API Handling, ETL Pipelines</li>
+      </ul>
+      <h3>Soft Skills</h3>
+      <ul>
+        <li class="icon-soft">Communication</li>
+        <li class="icon-soft">Critical Thinking</li>
+        <li class="icon-soft">Time Management</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Experience</h2>
-    <h3>The Reserve On Third LLC | Data Analyst</h3>
-    <p>Jan 2024 – Present</p>
-    <ul>
-      <li>Automated reporting and validation using Python/Excel VBA; reduced manual effort by 40%</li>
-      <li>Performed customer segmentation with SQL and Power BI; improved retention by 12%</li>
-      <li>Created documentation and data protocols for reproducibility and governance</li>
-    </ul>
+    <section>
+      <h2>Experience</h2>
+      <h3>The Reserve On Third LLC – Data Analyst (Jan 2024 – Present)</h3>
+      <ul>
+        <li>Automated workflows with Python and Excel VBA, reducing manual effort by 40%</li>
+        <li>Used SQL + Power BI to drive customer segmentation, improving retention by 12%</li>
+        <li>Created stakeholder-ready reports and forecasting tools for data-driven planning</li>
+      </ul>
 
-    <h3>Hewlett Packard Enterprise | Technical Support Associate</h3>
-    <p>Feb 2022 – Mar 2023</p>
-    <ul>
-      <li>Diagnosed enterprise-level hardware/network issues and improved user satisfaction</li>
-      <li>Reduced support requests by 25% through documentation and self-service tools</li>
-      <li>Provided customized onboarding and setup for clients</li>
-    </ul>
+      <h3>Hewlett Packard Enterprise – Technical Support (Feb 2022 – Mar 2023)</h3>
+      <ul>
+        <li>Resolved enterprise hardware/network issues; exceeded SLA benchmarks</li>
+        <li>Authored internal documentation, reducing support load by 25%</li>
+        <li>Led onboarding and system setup for diverse client environments</li>
+      </ul>
 
-    <h3>Trishana Technologies | Web Developer Intern</h3>
-    <p>Aug 2021 – Feb 2022</p>
-    <ul>
-      <li>Built full-stack e-commerce app with PHP and MySQL</li>
-      <li>Implemented secure login, listings, and order flows</li>
-      <li>Collaborated with QA to deliver early and polished modules</li>
-    </ul>
-  </section>
+      <h3>Trishana Technologies – Web Developer Intern (Aug 2021 – Feb 2022)</h3>
+      <ul>
+        <li>Built full-stack e-commerce platform using PHP, MySQL, HTML/CSS</li>
+        <li>Collaborated on real-time features for login, orders, and UI integration</li>
+        <li>Delivered modules early by mastering tools and collaborating with QA</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Projects</h2>
-    <h3>Banking Analytics Dashboard</h3>
-    <p>Power BI, DAX, Python, SQL</p>
-    <ul>
-      <li>Built a dashboard to analyze loan distribution, demographics, and trends</li>
-      <li>Used SQL/Python pipelines and DAX for drill-downs and reporting</li>
-    </ul>
+    <section>
+      <h2>Projects</h2>
+      <h3>Banking Analytics Dashboard</h3>
+      <ul>
+        <li>Created KPI-driven dashboard using Power BI, Python, and SQL</li>
+        <li>Enabled drilldowns with DAX; reduced refresh time by 40%</li>
+      </ul>
 
-    <h3>Event Management System</h3>
-    <p>Django, Python, SQLite, HTML/CSS</p>
-    <ul>
-      <li>Created a web app for scheduling and managing events</li>
-      <li>Implemented role-based access and CRUD with Django</li>
-    </ul>
-  </section>
+      <h3>Event Management System</h3>
+      <ul>
+        <li>Built event scheduling platform in Django with role-based access</li>
+        <li>Reduced admin time by 30% using dynamic staff/venue modules</li>
+      </ul>
+
+      <h3>Gate Pass Monitoring System</h3>
+      <ul>
+        <li>Digitized gate pass logging with PHP, MySQL, and JavaScript</li>
+        <li>Built responsive UI; improved admin response time by 40%</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      <ul>
+        <li>Google Data Analytics – Google (Jan 2025)</li>
+        <li>Certified Web Developer – HTML, CSS, JS (Feb 2022)</li>
+        <li>IoT Project Presenter – Softex 2020</li>
+      </ul>
+    </section>
+  </div>
 
   <footer>
     &copy; 2025 Syed Hajira | Designed with ❤️
