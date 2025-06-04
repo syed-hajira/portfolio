@@ -1,82 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Syed Hajira | Data Analyst Portfolio</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background-color: #f4f6f8;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f4f8;
       color: #333;
-      line-height: 1.6;
     }
     header {
-      background: linear-gradient(to right, #007acc, #005a9e);
+      background: linear-gradient(to right, #007acc, #004080);
       color: white;
-      padding: 3rem 1rem;
+      padding: 3rem 1rem 2rem;
       text-align: center;
     }
-    header h1 {
-      font-size: 2.8rem;
-      margin: 0;
-    }
-    header p {
-      margin: 0.5rem 0 1rem;
-    }
+    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.1rem; }
     .links a {
+      display: inline-block;
+      margin: 0 0.5rem;
       color: white;
-      margin: 0 1rem;
-      text-decoration: none;
       font-size: 1rem;
+      text-decoration: none;
     }
     .container {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
       padding: 2rem;
     }
     section {
-      margin-bottom: 3rem;
       background: white;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       padding: 2rem;
-      animation: fadeIn 0.6s ease-in-out;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      margin-bottom: 2rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
     }
     h2 {
-      border-bottom: 2px solid #007acc;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    .icon-skill::before {
-      content: "\f121";
-      font-family: "Font Awesome 6 Free";
-      font-weight: 900;
+      border-left: 4px solid #007acc;
+      padding-left: 0.5rem;
+      margin-bottom: 1.5rem;
       color: #007acc;
-      margin-right: 0.5rem;
     }
-    .icon-soft::before {
-      content: "\f0eb";
-      font-family: "Font Awesome 6 Free";
-      font-weight: 900;
-      color: #e67e22;
-      margin-right: 0.5rem;
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .skill-card {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 8px;
+      border-left: 4px solid #007acc;
+    }
+    .skill-card i {
+      margin-right: 8px;
+      color: #007acc;
+    }
+    .two-col {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .two-col > div {
+      flex: 1 1 48%;
+    }
+    ul { padding-left: 1.2rem; }
+    .project-card {
+      background: #fff;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid #007acc;
+      border-radius: 8px;
     }
     footer {
       text-align: center;
-      padding: 1rem;
       font-size: 0.9rem;
+      padding: 1.5rem;
       background: #eaeaea;
-      color: #555;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background: #007acc;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -86,87 +101,78 @@
     <p>Data Analyst | Python | SQL | Power BI</p>
     <div class="links">
       <a href="mailto:hajirasyed.k@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-      <a href="https://www.linkedin.com/in/syed-hajira" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://www.linkedin.com/in/syed-hajira/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
       <a href="https://github.com/syed-hajira" target="_blank"><i class="fab fa-github"></i> GitHub</a>
     </div>
+    <a href="resume.pdf" class="btn" target="_blank">Download Resume</a>
   </header>
 
   <div class="container">
     <section>
       <h2>About Me</h2>
-      <p>
-        Strategic analytics professional focused on building data products and automated reporting systems to sharpen decision-making and operational performance. Experienced in Python, SQL, and BI tools with a design-led mindset toward modeling, dashboards, and automation.
-      </p>
+      <p>Strategic analytics professional focused on building data products and automated reporting systems that sharpen decision-making and streamline operations. Experienced in Python, SQL, and BI tools with a design-led mindset toward modeling, dashboards, and automation.</p>
     </section>
 
     <section>
       <h2>Skills</h2>
-      <ul>
-        <li class="icon-skill">Python (Pandas, NumPy, Matplotlib, Seaborn), R, SQL</li>
-        <li class="icon-skill">Power BI, Tableau, Excel, DAX, Power Query</li>
-        <li class="icon-skill">HTML, CSS, JavaScript, Git, GitHub</li>
-        <li class="icon-skill">Web Scraping, API Handling, ETL Pipelines</li>
-      </ul>
-      <h3>Soft Skills</h3>
-      <ul>
-        <li class="icon-soft">Communication</li>
-        <li class="icon-soft">Critical Thinking</li>
-        <li class="icon-soft">Time Management</li>
-      </ul>
+      <div class="skills-grid">
+        <div class="skill-card"><i class="fas fa-code"></i> Python, R, SQL, HTML/CSS, JavaScript</div>
+        <div class="skill-card"><i class="fas fa-chart-bar"></i> Power BI, Tableau, Excel, DAX, Power Query</div>
+        <div class="skill-card"><i class="fas fa-database"></i> Data Wrangling, KPI Analysis, ETL, Web Scraping</div>
+        <div class="skill-card"><i class="fas fa-brain"></i> Communication, Critical Thinking, Time Management</div>
+      </div>
     </section>
 
     <section>
       <h2>Experience</h2>
-      <h3>The Reserve On Third LLC – Data Analyst (Jan 2024 – Present)</h3>
-      <ul>
-        <li>Automated workflows with Python and Excel VBA, reducing manual effort by 40%</li>
-        <li>Used SQL + Power BI to drive customer segmentation, improving retention by 12%</li>
-        <li>Created stakeholder-ready reports and forecasting tools for data-driven planning</li>
-      </ul>
-
-      <h3>Hewlett Packard Enterprise – Technical Support (Feb 2022 – Mar 2023)</h3>
-      <ul>
-        <li>Resolved enterprise hardware/network issues; exceeded SLA benchmarks</li>
-        <li>Authored internal documentation, reducing support load by 25%</li>
-        <li>Led onboarding and system setup for diverse client environments</li>
-      </ul>
-
-      <h3>Trishana Technologies – Web Developer Intern (Aug 2021 – Feb 2022)</h3>
-      <ul>
-        <li>Built full-stack e-commerce platform using PHP, MySQL, HTML/CSS</li>
-        <li>Collaborated on real-time features for login, orders, and UI integration</li>
-        <li>Delivered modules early by mastering tools and collaborating with QA</li>
-      </ul>
+      <div class="two-col">
+        <div>
+          <h3>The Reserve On Third LLC</h3>
+          <p><strong>Data Analyst</strong> – Jan 2024 – Present</p>
+          <ul>
+            <li>Automated reporting using Python/Excel VBA; saved 40% manual effort</li>
+            <li>Segmented cohorts using SQL + Power BI, improving retention by 12%</li>
+            <li>Built audit-ready reporting systems for long-term reproducibility</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Hewlett Packard Enterprise</h3>
+          <p><strong>Tech Support Associate</strong> – Feb 2022 – Mar 2023</p>
+          <ul>
+            <li>Resolved tech issues across enterprise systems, met all SLA targets</li>
+            <li>Wrote help documentation, reducing support volume by 25%</li>
+            <li>Led onboarding for clients, reducing post-installation errors</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Trishana Technologies</h3>
+          <p><strong>Web Developer Intern</strong> – Aug 2021 – Feb 2022</p>
+          <ul>
+            <li>Built full-stack e-commerce web app using PHP, MySQL</li>
+            <li>Delivered production-ready login, listings, and order flows</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section>
       <h2>Projects</h2>
-      <h3>Banking Analytics Dashboard</h3>
-      <ul>
-        <li>Created KPI-driven dashboard using Power BI, Python, and SQL</li>
-        <li>Enabled drilldowns with DAX; reduced refresh time by 40%</li>
-      </ul>
-
-      <h3>Event Management System</h3>
-      <ul>
-        <li>Built event scheduling platform in Django with role-based access</li>
-        <li>Reduced admin time by 30% using dynamic staff/venue modules</li>
-      </ul>
-
-      <h3>Gate Pass Monitoring System</h3>
-      <ul>
-        <li>Digitized gate pass logging with PHP, MySQL, and JavaScript</li>
-        <li>Built responsive UI; improved admin response time by 40%</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Certifications</h2>
-      <ul>
-        <li>Google Data Analytics – Google (Jan 2025)</li>
-        <li>Certified Web Developer – HTML, CSS, JS (Feb 2022)</li>
-        <li>IoT Project Presenter – Softex 2020</li>
-      </ul>
+      <div class="project-card">
+        <h4>Banking Analytics Dashboard</h4>
+        <p>Power BI, DAX, Python, SQL</p>
+        <ul>
+          <li>Built regional dashboard with interactive filters & drill-downs</li>
+          <li>Connected cleaned datasets from Python/SQL</li>
+        </ul>
+      </div>
+      <div class="project-card">
+        <h4>Event Management System</h4>
+        <p>Django, SQLite, Python, HTML/CSS</p>
+        <ul>
+          <li>Created a centralized event scheduling & user management platform</li>
+          <li>Implemented role-based access & CRUD backend</li>
+        </ul>
+      </div>
     </section>
   </div>
 
